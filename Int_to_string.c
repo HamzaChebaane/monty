@@ -5,7 +5,7 @@ char *get_int(int num);
 unsigned int _abs(int);
 int get_numbase_len(unsigned int num, unsigned int base);
 void fill_numbase_buff(unsigned int num, unsigned int base,
-               char *buff, int buff_size);
+		char *buff, int buff_size);
 
 
 /**
@@ -16,14 +16,13 @@ void fill_numbase_buff(unsigned int num, unsigned int base,
  */
 char *get_int(int num)
 {
-    unsigned int temp;
-    int length = 0;
-    long num_l = 0;
-    char *ret;
-
-
-    temp = _abs(num);
-    length = get_numbase_len(temp, 10);
+	unsigned int temp;
+	int length = 0;
+	long num_l = 0;
+	char *ret;
+	
+	temp = _abs(num);
+	length = get_numbase_len(temp, 10);
 
 
     if (num < 0 || num_l < 0)
