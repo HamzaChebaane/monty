@@ -54,7 +54,7 @@ void monty_push(stack_t **stack, unsigned int line_number)
 	else /* QUEUE mode insert at end */
 	{
 		tmp = *stack;
-		while (tmp->next);
+		while (tmp->next)
 		tmp = tmp->next;
 		new->prev = tmp;
 		new->next = NULL;
