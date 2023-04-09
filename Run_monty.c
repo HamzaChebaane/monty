@@ -140,12 +140,13 @@ int run_monty(FILE *script_fd)
 			continue;
 		}
 		op_func = get_op_func(op_toks[0]);
+
 		if (op_func == NULL)
 		{
-	free_stack(&stack);
-	exit_status = unknown_op_error(op_toks[0], line_number);
-	free_tokens();
-	break;
+			free_stack(&stack);
+			exit_status = unknown_op_error(op_toks[0], line_number);
+			free_tokens();
+			break;
 		}
 		prev_tok_len = token_arr_len();
 		op_func(&stack, line_number);
